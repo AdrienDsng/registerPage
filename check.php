@@ -29,7 +29,7 @@ function checkForm(){
             // Attempt insert query execution
             $sql = "INSERT INTO users (username, email) VALUES ('".$username."', '".$email."')";
             if(mysqli_query($link, $sql)){
-                echo "User registered successfully.";
+                header('Location: success.html');
             } else{
                 echo "ERROR: The command could not be executed $sql. " . mysqli_error($link);
             }
